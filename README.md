@@ -7,7 +7,7 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=flat&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 
-## Demo en Vivo
+## Demo
 **[Visita SecureOn Landing Page](https://devtergentes.github.io/secureOn-landing-page/)**
 
 ---
@@ -95,7 +95,7 @@ secureOn-landing-page/
 
 ## Equipo de Desarrollo - DevTergentes
 
-| Integrante | Código | Rol | Especialización |
+| Integrante | Código |
 |------------|--------|-----|-----------------|
 | **Camila Elena Amaro Villanueva** | u202114248 |
 | **Jherson David Astuyauri Calderon** | u202218451 | 
