@@ -96,7 +96,7 @@ secureOn-landing-page/
 ## Equipo de Desarrollo - DevTergentes
 
 | Integrante | Código |
-|------------|--------|-----|-----------------|
+|------------|--------|
 | **Camila Elena Amaro Villanueva** | u202114248 |
 | **Jherson David Astuyauri Calderon** | u202218451 | 
 | **Claudio Sandro Quispesivana Torres** | u202215099 | 
