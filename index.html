@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="SecureOn" />
+    <meta name="description" content="Aplicación de deteccion y alerta para el transporte seguro de productos peligrosos" />
+    <meta name="keywords" content="Transporte de materiales peligrosos,Productos altamente peligrosos,Peru" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="Spanish" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="author" content="CuriDev" />
+    <!-- TITLE -->
+    <title>SecureOn</title>
+    <!-- LINKS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg custom-navbar py-3 fixed-top fs-4">
+  <div class="container">
+        <a class="navbar-brand d-flex align-items-center h1 fw-bold fs-3" href="#">
+      <img
+        src="./assets/images/logo_securon.png"
+        alt="logo"
+        width="70"  
+        height="70"
+        class="d-inline-block align-text-top rounded-circle"
+      />
+      <span class="ms-3">SecureOn</span>
+    </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Quiénes somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#download">Descargar</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://SecureOn-app.netlify.app/services"
+                >Aplicación</a
+              >
+            </li>
+                                 <li class="nav-item">
+                        <div class="toggle-language-switch">
+                          <span class="toggle-label">ES</span>
+                          <label class="switch">
+                            <input type="checkbox" id="language-toggle" onchange="toggleLanguage(this)">
+                            <span class="slider round"></span>
+                          </label>
+                          <span class="toggle-label">EN</span>
+                        </div>
+                      </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- HERO SECTION -->
+    <div class="hero" id="home">
+      <div class="content justify-content-center text-center">
+        <h1 class="text-white">
+          Bienvenido a
+          <span class="fw-bold level-2-title"> SecureOn: </span> Tu Guia para el 
+
+        </h1>
+         <h1 class="text-white">
+          transporte de productos peligrosos
+                </h1>
+<p class="text-white fs-3 my-4">
+          Transporta productos peligrosos y déjanos toda la seguridad en nuestras manos
+        </p>
+<a href="#about" class="btn btn-lg text-white my-4"
+   style="background-color: #f57c00; font-weight: bold; padding: 10px 30px; font-size: 1.5rem;">
+  Saber más
+</a>
+      </div>
+    </div>
+    <!-- SERVICES -->
+    <section class="p-5" id="services">
+      <div class="container py-5">
+        <h1 class="text-center mb-5 level-1-title fw-bold">Nuestros servicios</h1>
+        <div class="row text-center g-4">
+          <div class="col-md">
+            <div class="card p-5">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="fa-solid fa-car" style="color: #FCB658"></i>
+                </div>
+                <h2 class="level-2-title card-title fw-bold mb-3">Servicio de Transporte</h2>
+                <p class="card-text paragraph lead">
+                  Brindamos un servicio de transporte de productos peligrosos,
+                  implementando la supervisión tanto del conductor como el monitoreo
+                  para la empresa.
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md">
+            <div class="card p-5">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="fa-solid fa-eye" style="color: #FCB658"></i>
+                </div>
+                <h2 class="level-2-title card-title fw-bold mb-3">Monitoreo en Tiempo Real</h2>
+                <p class="card-text paragraph lead">
+                  Ofrecemos un sistema de monitoreo en tiempo real que pueda
+                  detectar posibles fugas de gases combustibles (GNV) durante el
+                  transporte de estos.
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md">
+            <div class="card p-5">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="fa-solid fa-microchip" style="color: #FCB658"></i>
+                </div>
+                <h2 class="level-2-title card-title fw-bold mb-3">Uso de Sensores IoT</h2>
+                <p class="card-text paragraph lead">
+                  Los vehículos contarán con sensores que supervisarán el material
+                  de carga y se notificará en caso de existir una fuga. Serán
+                  sensores de temperatura, presión, movimiento, etc.
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md">
+            <div class="card p-5">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="fa-solid fa-shield-heart" style="color: #FCB658"></i>
+                </div>
+                <h2 class="level-2-title card-title fw-bold mb-3">Transporte Seguro</h2>
+                <p class="card-text paragraph lead">
+                  Juntos podremos transportar materiales y productos peligrosos sin
+                  ningún tipo de peligro. Déjanos ayudarte y cuidarte en toda tu
+                  travesía.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Section 
+        <div class="mt-5 text-center">
+          <h2 class="mb-3">Video About the Product:</h2>
+          <div class="ratio ratio-16x9">
+            <iframe
+              src="https://www.youtube.com/embed/Yvt-Ny_nIB8"
+              title="SecureOn - Video de Servicios"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+-->
+
+      <!-- Reemplazar la sección ABOUT existente con esta versión mejorada -->
+    <!-- ABOUT -->
+    <section class="bg-light p-5" id="about">
+      <div class="container py-5">
+        <div class="row justify-content-between align-items-center mb-5">
+          <div class="col-md">
+            <a href="#">
+              <img
+                class="img-fluid img-thumbnail"
+                src="assets/images/peligrosa.jpeg"
+                alt="imagen que representa a un vehiculo transportando productos peligrosos"
+              />
+            </a>
+          </div>
+          <div class="col-md p-5">
+            <h1 class="level-1-title fw-bold">¿Quiénes somos?</h1>
+            <p class="paragraph lead">
+              SecureOn nació gracias a la necesidad de una empresa dedicada a
+              gestionar la seguridad en el transporte de productos peligrosos.
+              Nuestra misión es ayudar a los transportistas a sentirse más seguros
+              y protegidos en sus trabajos, desde materiales menos peligrosos hasta
+              aquellos altamente riesgosos que puedan dañar la salud de las
+              personas.
+            </p>
+            <p class="paragraph lead">
+              Únete y sé parte de esta familia, que ayudándonos mutuamente
+              garantizamos un transporte tranquilo y sin preocupaciones.
+            </p>
+            <a href="#team" class="btn btn-lg text-white my-4"
+               style="background-color: #74c04a; font-weight: bold; padding: 10px 30px; font-size: 1.5rem;">
+              Conoce al equipo <i class="fa-solid fa-chevron-down"></i>
+            </a>
+          </div>
+        </div>
+    
+        <!-- Team Section -->
+        <div id="team" class="mt-5">
+          <h1 class="text-center level-1-title fw-bold mb-5">Nuestro Equipo</h1>
+          <div class="row g-4">
+            
+            <!-- Integrante 1 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <div class="team-card-container">
+                <div class="team-card">
+                  <div class="card-front">
+                    <img src="assets/images/team/Camila.png" alt="Camila Elena Amaro Villanueva" class="team-photo">
+                    <h5 class="team-name">Camila Elena</h5>
+                    <p class="team-role">Estudiante de Ingeniería de Software</p>
+                    <p class="team-id">u202114248</p>
+                  </div>
+                  <div class="card-back">
+                    <div class="team-description">
+                      <h6>Sobre mí</h6>
+                      <p>Mi nombre es Camila Elena Amaro Villanueva, cuento con conocimientos de desarrollo frontend y backend, además de lenguajes de programación como C++, Python y JavaScript. Además, entre mis habilidades, puedo resaltar la responsabilidad y creatividad que poseo para aportar en los trabajos en equipo.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Integrante 2 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <div class="team-card-container">
+                <div class="team-card">
+                  <div class="card-front">
+                    <img src="assets/images/team/Jherson.png" alt="Jherson David Astuyauri Calderon" class="team-photo">
+                    <h5 class="team-name">Jherson David</h5>
+                    <p class="team-role">Estudiante de Ingeniería de Software</p>
+                    <p class="team-id">u202218451</p>
+                  </div>
+                  <div class="card-back">
+                    <div class="team-description">
+                      <h6>Sobre mí</h6>
+                      <p>Soy Jherson, estudiante de Ingeniería de Software en la UPC (8.º ciclo). Me apasiona la inteligencia artificial y su potencial para transformar el mundo mediante soluciones más inteligentes y humanas. Tengo adaptabilidad, soy una persona responsable y proactiva con muchas ganas de crecer profesionalmente.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Integrante 3 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <div class="team-card-container">
+                <div class="team-card">
+                  <div class="card-front">
+                    <img src="assets/images/team/Sandro.png" alt="Claudio Sandro Quispesivana Torres" class="team-photo">
+                    <h5 class="team-name">Claudio Sandro</h5>
+                    <p class="team-role">Estudiante de Ingeniería de Software</p>
+                    <p class="team-id">u202215099</p>
+                  </div>
+                  <div class="card-back">
+                    <div class="team-description">
+                      <h6>Sobre mí</h6>
+                      <p>Mi nombre es Claudio Sandro Quispesivana Torres, tengo 20 años y estoy cursando el octavo ciclo de la carrera de Ingeniería de Software. Me apasiona la resolución de problemas mediante la aplicación de conceptos y tecnologías innovadoras. Como miembro del equipo, aporto un sólido conocimiento en desarrollo de software.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Integrante 4 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <div class="team-card-container">
+                <div class="team-card">
+                  <div class="card-front">
+                    <img src="assets/images/team/Jose.png" alt="Jose Daniel Mario Calderon Huaman" class="team-photo">
+                    <h5 class="team-name">Jose Daniel</h5>
+                    <p class="team-role">Estudiante de Ingeniería de Software</p>
+                    <p class="team-id">U202213076</p>
+                  </div>
+                  <div class="card-back">
+                    <div class="team-description">
+                      <h6>Sobre mí</h6>
+                      <p>Soy estudiante de 8.º ciclo de Ingeniería de Software con experiencia en desarrollo full-stack. Me considero una persona responsable, organizada y comprometida. Valoro el trabajo en equipo y me esfuerzo por aportar soluciones eficientes y bien estructuradas. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Integrante 5 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <div class="team-card-container">
+                <div class="team-card">
+                  <div class="card-front">
+                    <img src="assets/images/team/Jeremi.png" alt="Jeremi Jose Antonio Fretel" class="team-photo">
+                    <h5 class="team-name">Jeremi Jose</h5>
+                    <p class="team-role">Estudiante de Ingeniería de Software</p>
+                    <p class="team-id">U202219022</p>
+                  </div>
+                  <div class="card-back">
+                    <div class="team-description">
+                      <h6>Sobre mí</h6>
+                      <p>Soy estudiante de 8vo ciclo de la carrera de Ingeniería de Software en la UPC. Me considero una persona disciplinada y comprometida con mis objetivos académicos. He trabajado con tecnologías como C++, Python, Java, HTML/CSS, React y SQL. He desarrollado proyectos académicos principalmente en React.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </section>
+     <!--
+        <div class="mt-5 text-center">
+          <h2 class="mb-3">Video About the Team:</h2>
+          <div class="ratio ratio-16x9">
+            <iframe
+              src="https://www.youtube.com/embed/gcbiSk5zAf8"
+              title="SecureOn - ¿Quiénes Somos?"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+-->
+        </section>
+    <!-- TESTIMONIALS -->
+<section class="p-5" id="testimonials" style="background-color: #111A23;">
+      <div class="container py-5">
+        <h1 class="text-center level-1-title-white fw-bold">Testimonios</h1>
+
+        <p class="lead text-center text-white mb-5 paragraph">
+          Esto es lo que nuestros clientes opinan de nosotros
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card bg-light">
+              <div class="card-body text-center p-5">
+                <img
+                  class="img-fluid img-thumbnail mb-3"
+                  src="assets/images/p1.jpg"
+                  alt="foto de Miguel Rojas"
+                />
+                <h3 class="card-title mb-3 level-2-title fw-bold">
+                  Luis R. - Transportista experimentado
+                </h3>
+                <div class="small-ratings mb-3">
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <p class="card-text paragraph">
+                  "Desde que empecé a utilizar los sensores IoT de SecureOn, he tenido un control total sobre la temperatura y seguridad de mis cargas. Esto me ha permitido evitar incidentes costosos y garantizar que los productos lleguen en óptimas condiciones."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card bg-light">
+              <div class="card-body text-center p-5">
+                <img
+                  class="img-fluid img-thumbnail mb-3"
+                  src="assets/images/p2.jpg"
+                  alt="foto de Xiomara Vélez"
+                />
+                <h3 class="card-title mb-3 level-2-title fw-bold">
+                  Paola L. - Gerente de Operaciones
+                </h3>
+                <div class="small-ratings mb-3">
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                </div>
+                <p class="card-text paragraph">
+                  "Con los dispositivos IoT de SecureOn, hemos mejorado la eficiencia de nuestros transportes de productos de alto riesgo. La capacidad de monitorear en tiempo real nos ha permitido optimizar rutas y reducir riesgos significativamente."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card bg-light">
+              <div class="card-body text-center p-5">
+                <img
+                  class="img-fluid img-thumbnail mb-3"
+                  src="assets/images/p3.avif"
+                  alt="foto de Jean Quispe"
+                />
+                <h3 class="card-title mb-3 level-2-title fw-bold">
+                  Carlos G. -  Director de Logística
+                </h3>
+                <div class="small-ratings mb-3">
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <p class="card-text paragraph">
+                  "La implementación de los sensores IoT en nuestra cadena de suministro ha sido clave para mantener la integridad de nuestros productos durante el transporte. SecureOn nos brinda tranquilidad y seguridad en cada envío"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section class="p-5 bg-light" id="download">
+      <div class="container py-5">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-md">
+            <a href="#">
+              <img
+                class="img-fluid img-thumbnail"
+                src="assets/images/descarga.png"
+                alt="imagen que representa una descarga"
+              />
+            </a>
+          </div>
+          <div class="col-md p-5">
+            <h1 class="level-1-title fw-bold">Obtén nuestra aplicación</h1>
+            <p class="paragraph lead">
+              ¡Lleva la seguridad y tranquilidad contigo! Descarga nuestra aplicación SecureOn y seras parte de esta familia. Aprovecha las ventajas de transportar carga peligrosa con nuestra ayuda, seremos los primeros en avisarte ante cualqujier incidente y te daremos un sin numero de soluciones.
+            </p>
+
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-6 col-lg-6 mb-3">
+                <a href="#">
+                  <img
+                    class="img-fluid"
+                    src="assets/images/google-play-badge.png"
+                    alt="Disponible en Google Play"
+                    width="70%"
+                  />
+                </a>
+              </div>
+
+              <div class="col-md-6 col-lg-6 mb-3">
+                <a href="#">
+                  <img
+                    class="img-fluid"
+                    src="assets/images/app-store-badge.png"
+                    alt="Disponible en App Store"
+                    width="70%"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      </div>
+          </section>
+     <!-- FOOTER -->
+    <footer class="page-footer text-md-left text-white" id="contact">
+      <div class="container py-5">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <h1 class="text-uppercase font-weight-bold mb-4 fw-bold">
+              DevTergentes
+            </h1>
+            <p class="text-white paragraph">
+              "Protegiendo lo que es valioso, asegurando cada kilómetro. Tecnología IoT avanzada para un transporte de materiales peligrosos más seguro y confiable."
+            </p>
+            <div class="social-icons mt-4">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-3 mx-auto">
+            <h5 class="text-uppercase font-weight-bold mb-4">
+              Síguenos
+            </h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#">
+                  <i class="fa-brands fa-facebook mx-2"></i>
+                  Página de Facebook
+                </a>
+              </li>
+              <li class="mb-2">
+                <a href="#">
+                  <i class="fa-brands fa-instagram mx-2"></i>
+                  Cuenta de Instagram
+                </a>
+              </li>
+              <li class="mb-2">
+                <a href="#">
+                  <i class="fa-brands fa-tiktok mx-2"></i>
+                  Cuenta de TikTok
+                </a>
+              </li>
+              <li class="mb-2">
+                <a href="#">
+                  <i class="fa-brands fa-youtube mx-2"></i>
+                  Canal de YouTube
+                </a>
+              </li>
+            </ul>
+          </div>
+    
+          <div class="col-lg-4 col-xs-12 location">
+            <h5 class="text-uppercase font-weight-bold mb-4">Contacto</h5>
+            <p>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Lima, Perú - Universidad Peruana de Ciencias Aplicadas</span>
+            </p>
+            <p>
+              <i class="fa-solid fa-phone"></i>
+              <span>(+51) 999-999-999</span>
+            </p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              <span>DevTergentes@info.com</span>
+            </p>
+            <p>
+              <i class="fa-solid fa-globe"></i>
+              <span>www.secureon.com</span>
+            </p>
+          </div>
+        </div>
+        
+        <!-- Línea divisoria y copyright -->
+        <hr style="border-color: #74c04a; opacity: 0.3; margin: 2rem 0 1rem;">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p style="color: #e8e8e8; font-size: 0.9rem; margin: 0;">
+              © 2024 SecureOn by DevTergentes. Todos los derechos reservados. | 
+              <a href="#" style="color: #74c04a;">Política de Privacidad</a> | 
+              <a href="#" style="color: #74c04a;">Términos de Servicio</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+  
+</html>

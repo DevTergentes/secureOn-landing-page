@@ -1,0 +1,794 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Mejoras para el header y espaciado de secciones */
+
+/* Navbar mejorada */
+.custom-navbar {
+  background-color: #183856; /* Azul de la paleta */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: #ffdd57; /* Amarillo claro */
+  transition: all 0.3s ease;
+  padding: 0.8rem 1rem;
+}
+
+/* Estilo específico para el texto "SecureOn" en el navbar */
+.custom-navbar .navbar-brand span {
+  color: #ffdd57; /* Amarillo claro */
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra sutil para mejorar legibilidad */
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+/* Ajuste para hover en el logo */
+.custom-navbar .navbar-brand:hover span {
+  color: #ffffff; /* Cambia a blanco al pasar el cursor */
+}
+
+/* Ajuste responsivo */
+@media (max-width: 450px) {
+  .custom-navbar .navbar-brand span {
+    font-size: 1.4rem;
+  }
+}
+
+.custom-navbar .nav-item {
+  margin: 0 5px;
+}
+
+.custom-navbar .nav-link {
+  color: #FFFFFF !important; /* Blanco de legibilidad */
+  font-size: 1.1rem;
+  padding: 0.5rem 0.8rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.custom-navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #74c04a; /* Verde activo */
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover::after,
+.custom-navbar .nav-link.active::after {
+  width: 100%;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+  color: #74c04a !important; /* Verde activo */
+  transform: translateY(-2px);
+}
+
+/* Ajustes de espaciado para secciones */
+section {
+  padding: 4rem 0;
+}
+
+section h1 {
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+  letter-spacing: 0.5px;
+}
+
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+section p {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* Ajustes para el hero section */
+.hero .content {
+  padding-top: 280px;
+}
+
+.hero .content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.hero .content p {
+  font-size: 1.4rem !important;
+  max-width: 800px;
+  margin: 1.5rem auto;
+}
+
+/* Responsive media queries para el header */
+@media (max-width: 992px) {
+  .custom-navbar .navbar-nav {
+    margin-top: 15px;
+    background-color: rgba(24, 56, 86, 0.95);
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .custom-navbar .nav-item {
+    margin: 5px 0;
+  }
+  
+  .hero .content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .custom-navbar .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .hero .content h1 {
+    font-size: 1.8rem;
+  }
+}
+/* Enlaces generales */
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #74c04a; /* Verde activo */
+}
+
+/* Footer mejorado con paleta de colores */
+footer {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  bottom: 0;
+  background: linear-gradient(135deg, #183856 0%, #1a4068 50%, #1f4a7a 100%);
+  border-top: 4px solid #74c04a;
+}
+
+.page-footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #74c04a, transparent);
+}
+
+/* Títulos del footer */
+.page-footer h1,
+.page-footer h5 {
+  color: #ffdd57 !important;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.page-footer h1::after,
+.page-footer h5::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #74c04a, #5cb85c);
+  border-radius: 2px;
+}
+
+/* Párrafos del footer */
+.page-footer p {
+  color: #e8e8e8 !important;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Enlaces del footer */
+.page-footer a {
+  color: #e8e8e8;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.page-footer a:hover {
+  color: #74c04a !important;
+  transform: translateX(5px);
+}
+
+/* Iconos sociales principales */
+.page-footer .fa-brands {
+  color: #74c04a !important;
+  font-size: 1.5rem;
+  margin: 0 8px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.page-footer .fa-brands:hover {
+  background: #74c04a;
+  color: #183856 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(116, 192, 74, 0.3);
+}
+
+/* Lista de redes sociales */
+.page-footer .list-unstyled li {
+  margin-bottom: 0.8rem;
+  padding-left: 5px;
+}
+
+.page-footer .list-unstyled a {
+  padding: 5px 0;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.page-footer .list-unstyled a:hover {
+  background: rgba(116, 192, 74, 0.1);
+  padding-left: 10px;
+}
+
+/* Iconos de contacto - ajuste mejorado */
+.page-footer .fa-location-dot,
+.page-footer .fa-phone,
+.page-footer .fa-envelope,
+.page-footer .fa-globe {
+  color: #74c04a !important;
+  background: rgba(116, 192, 74, 0.2);
+  padding: 8px;
+  border-radius: 50%;
+  margin-right: 15px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0; /* Evita que el icono se comprima */
+}
+
+/* Contenedor de contacto - espaciado mejorado */
+.location p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 8px 0;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.location p span {
+  margin-left: 5px; /* Añade espacio extra entre el icono y el texto */
+  line-height: 1.5;
+}
+
+.location p:hover {
+  background: rgba(116, 192, 74, 0.05);
+  transform: translateX(5px);
+}
+
+/* Responsive para footer - mejora del espaciado */
+@media (max-width: 768px) {
+  .page-footer .col-lg-3,
+  .page-footer .col-lg-2 {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .page-footer h1::after,
+  .page-footer h5::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .location p {
+    justify-content: center;
+    text-align: left;
+  }
+  
+  .location p span {
+    margin-left: 8px; /* Más espacio en móviles */
+  }
+}
+
+
+/* Efecto de brillo sutil */
+.page-footer {
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+}
+/* Títulos */
+.level-1-title {
+  color: #183856; /* Azul de la paleta */
+  -webkit-text-fill-color: #183856;
+  -moz-text-fill-color: #183856;
+  -ms-text-fill-color: #183856;
+  font-family: "Heebo", sans-serif;
+}
+
+.level-1-title-white {
+  color: #FFFFFF; /* Blanco de legibilidad */
+  font-family: "Heebo", sans-serif;
+}
+
+.level-2-title {
+  color: #74c04a; /* Verde activo */
+  -webkit-text-fill-color: #74c04a;
+  -moz-text-fill-color: #74c04a;
+  -ms-text-fill-color: #74c04a;
+  font-family: "Heebo", sans-serif;
+}
+
+/* Párrafos */
+.paragraph {
+  color: #444444; /* Gris técnico */
+  font-family: "Jost", sans-serif;
+}
+
+/* Cards */
+.card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-color: #74c04a; /* Verde activo */
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  height: 90vh;
+  background-image: linear-gradient(rgba(24, 56, 86, 0.8), rgba(24, 56, 86, 0.8)),
+    url(../images/foto1.webp); /* Overlay con azul de la paleta */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .content {
+  padding-top: 300px;
+}
+
+/* Botones */
+.btn-primary, 
+.btn-lg[style*="background-color: #f57c00"] {
+  background-color: #74c04a !important; /* Verde activo */
+  border-color: #74c04a !important;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-lg[style*="background-color: #f57c00"]:hover {
+  background-color: #183856 !important; /* Azul de la paleta */
+  border-color: #183856 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Calificaciones */
+.small-ratings i {
+  color: #444444; /* Gris técnico */
+}
+
+.rating-color {
+  color: #74c04a !important; /* Verde activo */
+}
+
+.fa-solid.fa-book {
+  color: #183856; /* Azul de la paleta */
+}
+
+/* Iconos en cards */
+.fa-solid.fa-car, 
+.fa-solid.fa-eye, 
+.fa-solid.fa-microchip, 
+.fa-solid.fa-shield-heart {
+  color: #74c04a !important; /* Verde activo en vez de #FCB658 */
+}
+
+/* Iconos en footer */
+.fa-solid.fa-location-dot,
+.fa-solid.fa-phone,
+.fa-solid.fa-envelope {
+  color: #74c04a !important; /* Verde activo */
+}
+
+/* About section */
+.aboutpt-section {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column-pt {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 10px;
+}
+
+.container-iframe {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.container-iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive media queries */
+@media (max-width: 850px) {
+  .hero {
+    background-position: 50%;
+  }
+  
+  .custom-navbar .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero .content h5 {
+    font-size: 25px;
+  }
+  
+  .hero .content h1 {
+    font-size: 32px;
+  }
+  
+  .hero .content p {
+    font-size: 16px;
+  }
+  
+  .btn-lg {
+    padding: 8px 20px !important;
+    font-size: 1.25rem !important;
+  }
+  
+  .level-1-title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .column-pt {
+    width: calc(50% - 20px);
+    margin: 0 10px 20px;
+  }
+  
+  .card .h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .column-pt {
+    width: calc(33.33% - 20px);
+    margin: 0 10px 20px;
+  }
+  
+  .hero .content {
+    padding-top: 250px;
+  }
+}
+
+/* Toggle Switch para idiomas */
+.toggle-language-switch {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-top: 5px; /* Añadido margen superior para bajar el switch */
+  padding-bottom: 3px; /* Añadido padding inferior */
+  position: relative;
+  top: 5px; 
+}
+
+.toggle-label {
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0 5px;
+}
+
+.toggle-label:first-child {
+  color: #74c04a;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  margin: 0 5px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #74c04a;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media (max-width: 992px) {
+  .toggle-language-switch {
+    margin: 15px 0 5px; 
+    justify-content: center;
+    top: 0; 
+  }
+}
+/* Team Cards Styles - Versión mejorada con tarjetas más anchas y centradas */
+.team-card-container {
+  perspective: 1000px;
+  height: 420px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.team-card {
+  position: relative;
+  width: 100%;
+  max-width: 280px; /* Aumentado el ancho máximo */
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.team-card:hover {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px; /* Aumentado el padding */
+  text-align: center;
+}
+
+.card-front {
+  background: linear-gradient(135deg, #FFFFFF 0%, #f8f9fa 100%);
+  border: 2px solid #74c04a;
+}
+
+.card-back {
+  background: linear-gradient(135deg, #183856 0%, #2c5282 100%);
+  color: #FFFFFF;
+  transform: rotateY(180deg);
+}
+
+.team-photo {
+  width: 130px; /* Aumentado el tamaño de la foto */
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #74c04a;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+
+.team-name {
+  color: #183856;
+  font-weight: bold;
+  font-size: 1.3rem; /* Aumentado el tamaño de fuente */
+  margin-bottom: 10px;
+  font-family: "Heebo", sans-serif;
+}
+
+.team-role {
+  color: #74c04a;
+  font-weight: 600;
+  font-size: 1rem; /* Aumentado el tamaño de fuente */
+  margin-bottom: 8px;
+  font-family: "Jost", sans-serif;
+}
+
+.team-id {
+  color: #444444;
+  font-size: 0.9rem; /* Aumentado el tamaño de fuente */
+  font-family: "Jost", sans-serif;
+}
+
+.team-description {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.team-description h6 {
+  color: #74c04a;
+  font-weight: bold;
+  margin-bottom: 18px;
+  font-size: 1.2rem; /* Aumentado el tamaño de fuente */
+  font-family: "Heebo", sans-serif;
+}
+
+/* Ajuste del texto de descripción para que no se salga de la card */
+.team-description p {
+  color: #FFFFFF;
+  font-size: 0.75rem; /* Reducido de 0.9rem a 0.75rem */
+  line-height: 1.4; /* Reducido el line-height también */
+  text-align: justify;
+  font-family: "Jost", sans-serif;
+  overflow: hidden; /* Para asegurar que no se salga */
+  text-overflow: ellipsis; /* Añade puntos suspensivos si es necesario */
+}
+
+/* Ajustes responsivos para el texto de descripción */
+@media (max-width: 1200px) {
+  .team-description p {
+    font-size: 0.7rem;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-description p {
+    font-size: 0.65rem; /* Más pequeño en tablets */
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-description p {
+    font-size: 0.7rem; /* Ligeramente más grande en móviles por tener más espacio */
+    line-height: 1.4;
+  }
+}
+
+/* También ajustar el padding del contenedor de descripción para más espacio */
+.team-description {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px; /* Reducido de 10px a 5px */
+  overflow: hidden; /* Asegurar que el contenido no se desborde */
+}
+
+/* Ajustes para el contenedor de las tarjetas */
+#team .row {
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .team-card-container {
+    height: 400px;
+    max-width: 260px;
+  }
+  
+  .team-photo {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-card-container {
+    height: 380px;
+    max-width: 240px;
+  }
+  
+  .team-photo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .team-name {
+    font-size: 1.2rem;
+  }
+  
+  .team-description p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-lg-2.col-md-4.col-sm-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .team-card-container {
+    height: 360px;
+    max-width: 300px;
+    margin: 0 auto 30px;
+  }
+  
+  .team-card {
+    max-width: 300px;
+  }
+}
